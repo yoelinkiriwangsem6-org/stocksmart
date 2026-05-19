@@ -426,7 +426,7 @@
             btn.innerHTML = '<i class="ti ti-loader-2" style="animation:spin 1s linear infinite;"></i> Mendaftarkan...';
 
             try {
-                const res = await fetch('http://localhost:3000/users/register', {
+                const res = await fetch('/users/register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password, tipe_pengguna })

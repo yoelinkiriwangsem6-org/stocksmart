@@ -276,7 +276,7 @@
     async function fetchStocks() {
       try {
         const username = loggedUser ? loggedUser.username : '';
-        const res = await fetch(`http://localhost:3000/saham?username=${username}`);
+        const res = await fetch(`/saham?username=${username}`);
         allSaham = await res.json();
         
         const selector = document.getElementById('sahamSelector');

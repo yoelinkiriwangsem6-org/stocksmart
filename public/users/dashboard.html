@@ -195,8 +195,8 @@
       window.location.href = '/auth/login.html';
     }
 
-    const API_SAHAM = 'http://localhost:3000/saham?username=' + (loggedUser ? loggedUser.username : '');
-    const API_TOPSIS_SAVED = 'http://localhost:3000/topsis/saved?username=' + (loggedUser ? loggedUser.username : '');
+    const API_SAHAM = '/saham?username=' + (loggedUser ? loggedUser.username : '');
+    const API_TOPSIS_SAVED = '/topsis/saved?username=' + (loggedUser ? loggedUser.username : '');
 
     function toggleSidebar() {
       document.getElementById('sidebar').classList.toggle('collapsed');
@@ -256,7 +256,7 @@
 
     async function hitungTopsis() {
       try {
-        const res = await fetch('http://localhost:3000/topsis/hitung', {
+        const res = await fetch('/topsis/hitung', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username: loggedUser.username })

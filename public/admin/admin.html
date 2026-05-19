@@ -204,8 +204,8 @@
     async function loadAdminData() {
       try {
         const [usersRes, sahamRes] = await Promise.all([
-          fetch('http://localhost:3000/users'),
-          fetch('http://localhost:3000/saham')
+          fetch('/users'),
+          fetch('/saham')
         ]);
         allUsers = await usersRes.json();
         const saham = await sahamRes.json();

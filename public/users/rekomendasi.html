@@ -178,8 +178,8 @@
     async function loadRekomendasi() {
       try {
         const [topsisRes, sahamRes] = await Promise.all([
-          fetch('http://localhost:3000/topsis/saved?username=' + loggedUser.username),
-          fetch('http://localhost:3000/saham?username=' + loggedUser.username)
+          fetch('/topsis/saved?username=' + loggedUser.username),
+          fetch('/saham?username=' + loggedUser.username)
         ]);
         allData = await topsisRes.json();
         const saham = await sahamRes.json();
@@ -210,7 +210,7 @@
 
     async function hitungRekomendasi() {
       try {
-        const res = await fetch('http://localhost:3000/topsis/hitung', {
+        const res = await fetch('/topsis/hitung', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username: loggedUser.username })

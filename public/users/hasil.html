@@ -145,7 +145,7 @@
 
     async function loadHasil() {
       try {
-        const res = await fetch('http://localhost:3000/topsis/saved?username=' + loggedUser.username);
+        const res = await fetch('/topsis/saved?username=' + loggedUser.username);
         const data = await res.json();
 
         if (!data.length) {
@@ -213,7 +213,7 @@
 
     async function hitungUlangTopsis() {
       try {
-        const res = await fetch('http://localhost:3000/topsis/hitung', {
+        const res = await fetch('/topsis/hitung', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username: loggedUser.username })
