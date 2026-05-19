@@ -5,7 +5,7 @@ const app = express();
 const path = require("path");
 
 const session =
-require("express-session");
+  require("express-session");
 
 // =======================
 // MIDDLEWARE
@@ -58,27 +58,27 @@ app.get("/", (req, res) => {
 // =======================
 
 const sahamRoutes =
-require("./routes/saham");
+  require("./routes/saham");
 
 app.use("/saham", sahamRoutes);
 
 const kriteriaRoutes =
-require("./routes/kriteria");
+  require("./routes/kriteria");
 
 app.use("/kriteria", kriteriaRoutes);
 
 const penilaianRoutes =
-require("./routes/penilaian");
+  require("./routes/penilaian");
 
 app.use("/penilaian", penilaianRoutes);
 
 const topsisRoutes =
-require("./routes/topsis");
+  require("./routes/topsis");
 
 app.use("/topsis", topsisRoutes);
 
 const usersRoute =
-require("./routes/users");
+  require("./routes/users");
 
 app.use("/users", usersRoute);
 
@@ -86,10 +86,8 @@ app.use("/users", usersRoute);
 // SERVER
 // =======================
 
-if (process.env.NODE_ENV !== "production") {
-  app.listen(3000, () => {
-    console.log("Server jalan di http://localhost:3000");
-  });
-}
+const PORT = process.env.PORT || 3000;
 
-module.exports = app;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
