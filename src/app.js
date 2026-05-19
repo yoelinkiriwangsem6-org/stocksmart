@@ -57,30 +57,30 @@ app.get("/", (req, res) => {
 // ROUTES
 // =======================
 
-const sahamRoutes =
-  require("./routes/saham");
+// const sahamRoutes =
+//   require("./routes/saham");
 
-app.use("/saham", sahamRoutes);
+// app.use("/saham", sahamRoutes);
 
-const kriteriaRoutes =
-  require("./routes/kriteria");
+// const kriteriaRoutes =
+//   require("./routes/kriteria");
 
-app.use("/kriteria", kriteriaRoutes);
+// app.use("/kriteria", kriteriaRoutes);
 
-const penilaianRoutes =
-  require("./routes/penilaian");
+// const penilaianRoutes =
+//   require("./routes/penilaian");
 
-app.use("/penilaian", penilaianRoutes);
+// app.use("/penilaian", penilaianRoutes);
 
-const topsisRoutes =
-  require("./routes/topsis");
+// const topsisRoutes =
+//   require("./routes/topsis");
 
-app.use("/topsis", topsisRoutes);
+// app.use("/topsis", topsisRoutes);
 
-const usersRoute =
-  require("./routes/users");
+// const usersRoute =
+//   require("./routes/users");
 
-app.use("/users", usersRoute);
+// app.use("/users", usersRoute);
 
 // =======================
 // SERVER
